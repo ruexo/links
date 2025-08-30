@@ -22,8 +22,12 @@
 
 <head>
   <title>Azalea</title>
-  <link rel="icon" type="image/x-icon" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MS4xMiA1OS41OCI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgc3Ryb2tlLW1pdGVybGltaXQ6IDEwOwogICAgICB9CgogICAgICAuY2xzLTEsIC5jbHMtMiB7CiAgICAgICAgZmlsbDogbm9uZTsKICAgICAgICBzdHJva2U6ICNmZmY7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgc3Ryb2tlLWxpbmVqb2luOiByb3VuZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjMwLjU2IC41NSA2LjQ5IDEyLjE1IC41NCAzOC4xOSAxNy4yIDU5LjA4IDQzLjkyIDU5LjA4IDYwLjU3IDM4LjE5IDU0LjYzIDEyLjE1IDMwLjU2IC41NSIvPgogIDxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIzMC41NCAzLjQgOC44MSAxMy44NiAzLjQ0IDM3LjM4IDE4LjQ4IDU2LjI0IDQyLjYgNTYuMjQgNTcuNjQgMzcuMzggNTIuMjcgMTMuODYgMzAuNTQgMy40Ii8+CiAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtOC44MSwxMy44NnMyMS43Myw1LjQ0LDQzLjQ3LDAiLz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im0zLjQ0LDM3LjM3UzIxLjI1LDIzLjc3LDMwLjU2LDMuNCIvPgogIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTE4LjQ2LDU2LjI1cy40OS0yMi40LTkuNjMtNDIuMzkiLz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im00Mi41Nyw1Ni4yOFMyNS4zNyw0MS45MiwzLjQ0LDM3LjM2Ii8+CiAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtNTcuNiwzNy4zNHMtMjEuOTMsNC41Ny0zOS4xMywxOC45MiIvPgogIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTUyLjIxLDEzLjgycy0xMC4xMiwxOS45OS05LjYzLDQyLjM5Ii8+CiAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMzAuNDgsMy4zOHM5LjMxLDIwLjM4LDI3LjEyLDMzLjk3Ii8+CiAgPGNpcmNsZSBjbGFzcz0iY2xzLTEiIGN4PSIzMC40OCIgY3k9IjMxLjIiIHI9IjIzLjA5Ii8+CiAgPHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjE0LjAzIDI3LjQ5IDQ2LjkzIDI3LjQ5IDE3LjI5IDQxLjc2IDM3LjggMTYuMDQgMzAuNTggNDcuOTEgMjMuMTYgMTYuMDQgNDMuNjcgNDEuNzYgMTQuMDMgMjcuNDkiLz4KPC9zdmc+">
+  <link rel="icon" type="image/x-icon"
+    href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MS4xMiA1OS41OCI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgc3Ryb2tlLW1pdGVybGltaXQ6IDEwOwogICAgICB9CgogICAgICAuY2xzLTEsIC5jbHMtMiB7CiAgICAgICAgZmlsbDogbm9uZTsKICAgICAgICBzdHJva2U6ICNmZmY7CiAgICAgIH0KCiAgICAgIC5jbHMtMiB7CiAgICAgICAgc3Ryb2tlLWxpbmVqb2luOiByb3VuZDsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjMwLjU2IC41NSA2LjQ5IDEyLjE1IC41NCAzOC4xOSAxNy4yIDU5LjA4IDQzLjkyIDU5LjA4IDYwLjU3IDM4LjE5IDU0LjYzIDEyLjE1IDMwLjU2IC41NSIvPgogIDxwb2x5Z29uIGNsYXNzPSJjbHMtMSIgcG9pbnRzPSIzMC41NCAzLjQgOC44MSAxMy44NiAzLjQ0IDM3LjM4IDE4LjQ4IDU2LjI0IDQyLjYgNTYuMjQgNTcuNjQgMzcuMzggNTIuMjcgMTMuODYgMzAuNTQgMy40Ii8+CiAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtOC44MSwxMy44NnMyMS43Myw1LjQ0LDQzLjQ3LDAiLz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im0zLjQ0LDM3LjM3UzIxLjI1LDIzLjc3LDMwLjU2LDMuNCIvPgogIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTE4LjQ2LDU2LjI1cy40OS0yMi40LTkuNjMtNDIuMzkiLz4KICA8cGF0aCBjbGFzcz0iY2xzLTEiIGQ9Im00Mi41Nyw1Ni4yOFMyNS4zNyw0MS45MiwzLjQ0LDM3LjM2Ii8+CiAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtNTcuNiwzNy4zNHMtMjEuOTMsNC41Ny0zOS4xMywxOC45MiIvPgogIDxwYXRoIGNsYXNzPSJjbHMtMSIgZD0ibTUyLjIxLDEzLjgycy0xMC4xMiwxOS45OS05LjYzLDQyLjM5Ii8+CiAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMzAuNDgsMy4zOHM5LjMxLDIwLjM4LDI3LjEyLDMzLjk3Ii8+CiAgPGNpcmNsZSBjbGFzcz0iY2xzLTEiIGN4PSIzMC40OCIgY3k9IjMxLjIiIHI9IjIzLjA5Ii8+CiAgPHBvbHlnb24gY2xhc3M9ImNscy0yIiBwb2ludHM9IjE0LjAzIDI3LjQ5IDQ2LjkzIDI3LjQ5IDE3LjI5IDQxLjc2IDM3LjggMTYuMDQgMzAuNTggNDcuOTEgMjMuMTYgMTYuMDQgNDMuNjcgNDEuNzYgMTQuMDMgMjcuNDkiLz4KPC9zdmc+">
   <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Azalea Links Directory">
+  <meta name="keywords" content="Azalea, Aza7ea, Links, Music">
+  <meta name="author" content="Azalea">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap" rel="stylesheet">
@@ -45,16 +49,18 @@
   <hr>
   <ul>
     <li><a href="https://soundcloud.com/aza7ea">Soundcloud</a></li>
+    <li><a href="https://youtube.com/@aza7ea">Youtube Channel</a></li>
     <li>Recent Release
       <div class="embedded-item">
+
         <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2061024052&color=%230032ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2160691494&color=%230032ff&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
         <div
           style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
           <a href="https://soundcloud.com/aza7ea" title="azalea" target="_blank"
             style="color: #cccccc; text-decoration: none;">azalea</a> · <a
-            href="https://soundcloud.com/aza7ea/blacklight" title="blacklight" target="_blank"
-            style="color: #cccccc; text-decoration: none;">blacklight</a>
+            href="https://soundcloud.com/aza7ea/null-bearing-vip" title="null bearing VIP" target="_blank"
+            style="color: #cccccc; text-decoration: none;">null bearing VIP</a>
         </div>
       </div>
     </li>
@@ -67,13 +73,6 @@
     <li><a href="mailto:naexinaexi@gmail.com">Email</a></li>
     <li><a href="https://twitter.com/aza7ea">Twitter/X (rarely active)</a></li>
   </ul>
-
-  <h2>Beats & Kits</h2>
-  <hr>
-  <ul>
-    <li><a href="https://youtube.com/@aza7ea">Type Beats Channel</a></li>
-  </ul>
-
 
   <hr>
   <div class="buttons">
